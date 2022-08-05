@@ -1,10 +1,10 @@
 {
-    "name": "vilija19/modelhistory",
+    "name": "vilija19/modelshistory",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "vilija19\\modelhistory\\": "src/"
+            "Vilija19\\Modelshistory\\": "src/"
         }
     },
     "authors": [
@@ -13,6 +13,13 @@
             "email": "billibons777@gmail.com"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vilija19\\Modelshistory\\ModelsHistoryServiceProvider"
+            ]
+        }
+    },    
     "minimum-stability": "dev",
     "require": {}
 }
