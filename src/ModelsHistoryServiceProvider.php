@@ -2,7 +2,6 @@
 
 namespace Vilija19\Modelshistory;
 
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 
 class ModelsHistoryServiceProvider extends ServiceProvider

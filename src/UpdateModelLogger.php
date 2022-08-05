@@ -2,9 +2,20 @@
 
 namespace Vilija19\Modelshistory;
 
+/**
+ * UpdateModelLogger
+ * This class is used to log changes in models.
+ * If you want to get history of changes for your models, you need add this trait to model:
+ * use Vilija19\Modelshistory\ModelsHistoryTrait;
+ */
+
 class UpdateModelLogger
 {
-    public function handle($event)
+    /**
+     * @var Object $event
+     * @return void
+     */
+    public function handle(\Illuminate\Database\Eloquent\Model $event)
     {
         $changes = $event->getDirty();
         if (!$changes) {
@@ -28,23 +39,8 @@ class UpdateModelLogger
             $historyLogger->transaction_id = $transaction_id;
             $historyLogger->save();
         }
-        /*
-        $user = auth()->user();
-        $old = $event->oldAttributes;
-        $new = $event->newAttributes;
-        $fields = array_keys(array_diff_assoc($new, $old));
-        foreach ($fields as $field) {
-            $model->history()->create([
-                'entity_type' => get_class($model),
-                'entity_id' => $model->id,
-                'field_name' => $field,
-                'old_content' => $old[$field],
-                'new_content' => $new[$field],
-                'user_id' => $user->id,
-            ]);
-        }
-        */
-        return true;
+
+        return;
     }
 }
 
