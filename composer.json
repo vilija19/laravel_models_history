@@ -13,16 +13,13 @@
             "email": "billibons777@gmail.com"
         }
     ],
-    "scripts": {
-        "post-install-cmd": "php artisan vendor:publish --provider 'Vilija19\\Modelshistory\\ModelsHistoryServiceProvider'"
-    },
     "extra": {
         "laravel": {
             "providers": [
                 "Vilija19\\Modelshistory\\ModelsHistoryServiceProvider"
             ]
         }
-    },    
+    },   
     "minimum-stability": "dev",
     "require": {}
 }

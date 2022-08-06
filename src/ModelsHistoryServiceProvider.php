@@ -26,7 +26,9 @@ class ModelsHistoryServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/modelshistory.php' => config_path('modelshistory.php'),
-        ]);
+        ],
+        ['laravel-assets']
+        );
 
         foreach (config('modelshistory.models') as $model) {
             if (!class_exists($model)) {
