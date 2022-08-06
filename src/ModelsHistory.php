@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property str $old_content
  * @property str $new_content
  * @property bigint $user_id
+ * @property bigint $transaction_id
+ * @property DateTime $created_at
  * @property DateTime $updated_at
  */
 

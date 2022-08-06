@@ -19,7 +19,7 @@
                 "Vilija19\\Modelshistory\\ModelsHistoryServiceProvider"
             ]
         }
-    },   
+    },    
     "minimum-stability": "dev",
     "require": {}
 }
