@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('entity_type');
             $table->bigInteger('entity_id')->unsigned();
             $table->string('field_name');
-            $table->string('old_content');
+            $table->string('old_content')->nullable();
             $table->string('new_content');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('transaction_id')->unsigned();

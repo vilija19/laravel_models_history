@@ -26,7 +26,7 @@ class UpdateModelLogger
 
         foreach ($changes as $attribute_name => $value) {
             $historyLogger = new ModelsHistory();
-            if ($attribute_name == 'updated_at' || $attribute_name == 'created_at') {
+            if (in_array($attribute_name, ['updated_at', 'created_at'])) {
                 continue;
             }
 
